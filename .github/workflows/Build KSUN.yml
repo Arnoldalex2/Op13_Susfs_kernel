@@ -643,6 +643,8 @@ jobs:
 
       - name: "Enable features via defconfig"
         shell: bash
+      - name: Inject Custom Docker Configurations
+        run: bash ./docker_patch.sh
         run: |
           set -euo pipefail
           cd kernel_workspace/common
